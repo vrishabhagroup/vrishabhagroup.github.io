@@ -11,12 +11,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 @font-face {
-    font-family: "The Seasons";
-    src: url("fonts/TheSeasons.woff2") format("woff2");
+    font-family: "TheSeasonsBrand";
+    src: url("The%20Seasons%20Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -78,7 +78,7 @@ img {
 }
 
 .section-title {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: clamp(34px, 4vw, 49px);
     font-weight: 400;
     line-height: 1.2;
@@ -117,7 +117,7 @@ img {
 }
 
 .brand-name {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 29px;
     font-weight: 400;
     letter-spacing: .3px;
@@ -137,14 +137,15 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 23px;
 }
 
 .nav-links a {
     color: #F1EEE7;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     transition: .3s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -196,7 +197,7 @@ img {
 }
 
 .hero h1 {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: clamp(48px, 7vw, 86px);
     font-weight: 400;
     line-height: 1.08;
@@ -314,14 +315,14 @@ img {
 }
 
 .division-number {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     color: var(--gold);
     font-size: 34px;
     margin-bottom: 22px;
 }
 
 .division-card h3 {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 26px;
     font-weight: 400;
     line-height: 1.25;
@@ -371,7 +372,7 @@ img {
 }
 
 .focus-item h3 {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 22px;
     font-weight: 400;
     color: var(--green);
@@ -417,7 +418,7 @@ img {
 }
 
 .approach-item h3 {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 25px;
     font-weight: 400;
     margin: 15px 0 10px;
@@ -447,13 +448,15 @@ img {
 }
 
 .founder-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .founder-placeholder {
     color: var(--gold);
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 100px;
 }
 
@@ -466,7 +469,7 @@ img {
 }
 
 .founder-name {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     color: var(--green);
     font-size: 35px;
     font-weight: 400;
@@ -513,6 +516,10 @@ img {
     font-size: 16px;
 }
 
+.contact-row strong a:hover {
+    color: #99752F;
+}
+
 .contact-box {
     background: var(--green);
     padding: 45px;
@@ -520,7 +527,7 @@ img {
 }
 
 .contact-box h3 {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -548,7 +555,7 @@ footer {
 }
 
 .footer-brand {
-    font-family: "The Seasons", Georgia, serif;
+    font-family: "TheSeasonsBrand", Georgia, serif;
     color: var(--light-gold);
     font-size: 25px;
 }
@@ -587,13 +594,27 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
     .nav-links {
-        gap: 16px;
+        gap: 14px;
     }
 
     .nav-links a {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .brand-name {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
     }
 
     .division-grid {
@@ -750,6 +771,8 @@ footer {
 
 <body>
 
+<!-- NAVIGATION -->
+
 <header class="navbar">
     <div class="container nav-inner">
 
@@ -770,12 +793,15 @@ footer {
             <a href="#businesses">OUR BUSINESSES</a>
             <a href="#focus">OUR FOCUS</a>
             <a href="#founder">FOUNDER</a>
+            <a href="https://vrishabhaproperties.github.io/"
+               target="_blank" rel="noopener">
+                PROPERTIES WEBSITE ↗
+            </a>
             <a href="#contact" class="nav-contact">CONTACT</a>
         </nav>
 
     </div>
 </header>
-
 
 <!-- HERO -->
 
@@ -810,7 +836,6 @@ footer {
         </div>
     </div>
 </section>
-
 
 <!-- ABOUT -->
 
@@ -860,7 +885,6 @@ footer {
     </div>
 </section>
 
-
 <!-- OUR BUSINESSES -->
 
 <section class="section divisions" id="businesses">
@@ -877,13 +901,17 @@ footer {
 
         <div class="division-grid">
 
+            <!-- PROPERTIES -->
+
             <div class="division-card">
                 <div class="division-number">01</div>
                 <h3>Vrishabha Properties</h3>
+
                 <p>
                     Real estate brokerage and property transactions
                     connecting buyers, sellers and property owners.
                 </p>
+
                 <ul>
                     <li>Buying and selling properties</li>
                     <li>Residential and commercial properties</li>
@@ -891,16 +919,32 @@ footer {
                     <li>Property marketing and brokerage</li>
                     <li>Commission-based transactions</li>
                 </ul>
-                <a href="#contact" class="division-link">PROPERTY ENQUIRIES →</a>
+
+                <p>
+                    Visit our dedicated property sales website for
+                    available properties, buying and selling enquiries
+                    and commission-based brokerage services.
+                </p>
+
+                <a href="https://vrishabhaproperties.github.io/"
+                   target="_blank"
+                   rel="noopener"
+                   class="division-link">
+                    VISIT PROPERTIES WEBSITE ↗
+                </a>
             </div>
+
+            <!-- DEVELOPERS -->
 
             <div class="division-card">
                 <div class="division-number">02</div>
                 <h3>Vrishabha Developers</h3>
+
                 <p>
                     Land development and real estate project
                     development opportunities.
                 </p>
+
                 <ul>
                     <li>Residential layout development</li>
                     <li>Apartment and villa projects</li>
@@ -908,16 +952,23 @@ footer {
                     <li>Land aggregation</li>
                     <li>Residential and commercial projects</li>
                 </ul>
-                <a href="#contact" class="division-link">DEVELOPMENT ENQUIRIES →</a>
+
+                <a href="#contact" class="division-link">
+                    DEVELOPMENT ENQUIRIES →
+                </a>
             </div>
+
+            <!-- CONSTRUCTION -->
 
             <div class="division-card">
                 <div class="division-number">03</div>
                 <h3>Vrishabha Construction</h3>
+
                 <p>
                     Building construction and project execution
                     activities.
                 </p>
+
                 <ul>
                     <li>Residential construction</li>
                     <li>Commercial construction</li>
@@ -925,16 +976,23 @@ footer {
                     <li>Construction project coordination</li>
                     <li>Infrastructure-related works</li>
                 </ul>
-                <a href="#contact" class="division-link">CONSTRUCTION ENQUIRIES →</a>
+
+                <a href="#contact" class="division-link">
+                    CONSTRUCTION ENQUIRIES →
+                </a>
             </div>
+
+            <!-- INVESTORS -->
 
             <div class="division-card">
                 <div class="division-number">04</div>
                 <h3>Vrishabha Investors</h3>
+
                 <p>
                     Exploring property, land and real estate
                     investment opportunities.
                 </p>
+
                 <ul>
                     <li>Land investment opportunities</li>
                     <li>Real estate investments</li>
@@ -942,16 +1000,23 @@ footer {
                     <li>Investment partnerships</li>
                     <li>Landowner and investor coordination</li>
                 </ul>
-                <a href="#contact" class="division-link">INVESTMENT ENQUIRIES →</a>
+
+                <a href="#contact" class="division-link">
+                    INVESTMENT ENQUIRIES →
+                </a>
             </div>
+
+            <!-- PROPERTY CONSULTANCY -->
 
             <div class="division-card">
                 <div class="division-number">05</div>
                 <h3>Vrishabha Property Consultancy</h3>
+
                 <p>
                     Property guidance, research and real estate
                     consultancy services.
                 </p>
+
                 <ul>
                     <li>Property advisory</li>
                     <li>Land and site evaluation</li>
@@ -959,16 +1024,23 @@ footer {
                     <li>Real estate consultancy</li>
                     <li>Property transaction guidance</li>
                 </ul>
-                <a href="#contact" class="division-link">CONSULTANCY ENQUIRIES →</a>
+
+                <a href="#contact" class="division-link">
+                    CONSULTANCY ENQUIRIES →
+                </a>
             </div>
+
+            <!-- FINANCE -->
 
             <div class="division-card">
                 <div class="division-number">06</div>
                 <h3>Vrishabha Finance</h3>
+
                 <p>
                     Finance-related assistance and facilitation
                     for property customers.
                 </p>
+
                 <ul>
                     <li>Home loan assistance</li>
                     <li>Property loan facilitation</li>
@@ -976,13 +1048,15 @@ footer {
                     <li>Customer and lender coordination</li>
                     <li>Financial product facilitation</li>
                 </ul>
-                <a href="#contact" class="division-link">FINANCE ENQUIRIES →</a>
+
+                <a href="#contact" class="division-link">
+                    FINANCE ENQUIRIES →
+                </a>
             </div>
 
         </div>
     </div>
 </section>
-
 
 <!-- OUR FOCUS -->
 
@@ -1036,7 +1110,6 @@ footer {
     </div>
 </section>
 
-
 <!-- APPROACH -->
 
 <section class="section approach">
@@ -1087,7 +1160,6 @@ footer {
     </div>
 </section>
 
-
 <!-- FOUNDER -->
 
 <section class="section" id="founder">
@@ -1095,10 +1167,13 @@ footer {
 
         <div class="founder-image">
             <img
-                src="images/founder.jpg"
+                src="profile.jpeg"
                 alt="Vishwanath Gowda"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="founder-placeholder" style="display:none;">VG</div>
+
+            <div class="founder-placeholder" style="display:none;">
+                VG
+            </div>
         </div>
 
         <div class="founder-text">
@@ -1140,7 +1215,6 @@ footer {
     </div>
 </section>
 
-
 <!-- CONTACT -->
 
 <section class="section contact" id="contact">
@@ -1174,8 +1248,21 @@ footer {
                 </div>
 
                 <div class="contact-row">
+                    <span>PROPERTY SALES WEBSITE</span>
+                    <strong>
+                        <a href="https://vrishabhaproperties.github.io/"
+                           target="_blank"
+                           rel="noopener">
+                            vrishabhaproperties.github.io ↗
+                        </a>
+                    </strong>
+                </div>
+
+                <div class="contact-row">
                     <span>BUSINESS ACTIVITIES</span>
-                    <strong>Real Estate · Development · Construction · Investments</strong>
+                    <strong>
+                        Real Estate · Development · Construction · Investments
+                    </strong>
                 </div>
 
             </div>
@@ -1206,7 +1293,6 @@ footer {
     </div>
 </section>
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -1228,7 +1314,6 @@ footer {
     </div>
 </footer>
 
-
 <!-- WHATSAPP BUTTON -->
 
 <a
@@ -1239,7 +1324,6 @@ footer {
     aria-label="Chat with us on WhatsApp">
     W
 </a>
-
 
 <script>
 const menuToggle = document.getElementById("menuToggle");
